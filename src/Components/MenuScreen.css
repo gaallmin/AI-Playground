@@ -1,0 +1,31 @@
+.menu-screen {
+  background-image: url('public/background_img.jpg'); /* Ensure the image is in the public folder */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.menu-content h1 {
+  margin-bottom: 20px;
+}
+
+.menu-content button {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
