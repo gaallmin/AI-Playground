@@ -1,0 +1,196 @@
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 20px;
+    /* Main wrapper that stacks sections vertically and ensures full-page height */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 10px;
+    margin: 0 auto 20px auto;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    z-index: 1000;
+    /* Navbar stays at the top and looks a bit frosted for style */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo-text {
+    letter-spacing: 1px;
+}
+.logo-text .logo-p { color: #FF6B6B; }
+.logo-text .logo-l { color: #4ECDC4; }
+.logo-text .logo-a { color: #FFD166; }
+.logo-text .logo-y { color: #54DE5A; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #3a2e5c;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #8a2be2cc;
+    color: white;
+}
+
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    /* This is the main box in the center with a soft background and rounded edges (as we had in figma)*/
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    color: #e74c3c;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-subtitle .highlight-fun {
+    font-weight: 700;
+    color: #3498db;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #8A2BE2, #FF00FF);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* The button has a pop effect */
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.5);
+}
+
+.cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.4);
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: rgba(44, 62, 80, 0.8);
+    color: #ecf0f1;
+    font-size: 0.9rem;
+    margin-top: auto;
+    border-radius: 20px 20px 0 0;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    /* Footer sits at the bottom and matches the overall look of the page */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav-links li a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-content {
+        padding: 30px 25px;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+}
